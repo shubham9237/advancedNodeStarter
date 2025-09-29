@@ -13,7 +13,8 @@
     "test": "jest"
   },
   "jest": {
-    "testRunner": "jest-circus/runner"
+    "testRunner": "jest-circus/runner",
+    "setupFilesAfterEnv":["./tests/setup.js"]
   },
   "author": "",
   "license": "ISC",
