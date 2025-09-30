@@ -21,3 +21,19 @@ test('When logged in can see blog create form', async () => {
 
 
 });
+
+// these below tests only execute inside the console of the test suit chromium
+// describe("When not logged in", async () => {
+//     test("cannot create blog post", async ()=>{
+//         const result = await page.get("http://localhost:3000/api/blogs");
+//         expect(result).toEqual({error:"You must log in!"})
+//     })
+//     test("cannot create blog post", async ()=>{
+//         const data = {
+//             title:"a",
+//             content:"c"
+//         }
+//         const result = await page.post("http://localhost:3000/api/blogs", data);
+//         expect(result).toEqual({error:"You must log in!"})
+//     })
+// })
