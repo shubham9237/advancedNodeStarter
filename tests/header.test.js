@@ -19,7 +19,7 @@ test('Header has the correct text', async () => {
 //     const text = await page.$eval('a.brand-logo', el => el.innerHTML);
 //     await page.click('.right a');
 //     const url = await page.url();
-//     expect(url).toMatch(/google\.com/)/
+//     expect(url).toMatch(/google\.com/)
 // });
 
 test('When signed in shows logout', async () => {
