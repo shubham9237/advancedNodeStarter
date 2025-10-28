@@ -1,5 +1,5 @@
-language: nide_js
-nide_js:
+language: node_js
+node_js:
   - "20.0.0"
 dist: trusty
 services:
