@@ -1,20 +1,32 @@
 language: node_js
 node_js:
-  - "20.0.0"
-dist: jammy
+  - "20"
+
+dist: jammy  # Ubuntu 22.04 (modern, supports Node 20)
+
 services:
   - mongodb
   - redis-server
+
 env:
-  - NODE_ENV=ci PORT=3000
+  global:
+    - NODE_ENV=ci
+    - PORT=3000
+
 cache:
+  npm: true
   directories:
-    - node_modules
     - client/node_modules
+
 install:
-  - npm install
+  - npm ci
   - npm run build
+
 script:
-  - nohup npm run start &
-  - sleep 3
-  - npm run test
+  - npm run start &
+  - sleep 5
+  - npm test
+
+branches:
+  only:
+    - main
